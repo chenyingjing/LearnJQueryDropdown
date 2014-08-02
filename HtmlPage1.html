@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+
+    <link type="text/css" rel="stylesheet" href="jquery.dropdown.css" />
+    <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="jquery.dropdown.js"></script>
+</head>
+    <script>
+        $(function () {
+            $('.MyDropdown').on('show', function (event, dropdownData) {
+                console.log(dropdownData);
+            }).on('hide', function (event, dropdownData) {
+                console.log(dropdownData);
+            });
+        });
+    </script>
+
+<body>
+    hello
+    <a href="#" id="trigger" data-dropdown=".MyDropdown">dropdown</a>
+    <button onclick="button1OnClick();">button1</button>
+
+<!--    <div id="dropdown-1" class="dropdown dropdown-tip">
+        <div class="dropdown-panel">
+            You can put whatever HTML you want in a panel!
+        </div>
+    </div>-->
+
+
+    <div class="MyDropdown dropdown dropdown-tip">
+        <ul class="dropdown-menu">
+            <li><a href="#1">Item 1</a></li>
+            <li><a href="#2">Item 2</a></li>
+            <li><a href="#3">Item 3</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="#4">Item 4</a></li>
+            <li><a href="#5">Item 5</a></li>
+            <li><a href="#5">Item 6</a></li>
+        </ul>
+    </div>
+</body>
+</html>
